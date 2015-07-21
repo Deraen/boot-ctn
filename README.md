@@ -12,7 +12,7 @@ Setup [clojure.tools.namespace] to watch Boot temp dirs.
 
 (init-ctn!)
 
-; If you want to filter dirs, use :filter-fn option.
+; If you want to filter dirs, use :remove-fn option.
 ; To remove folders with .no-reload file:
 (init-ctn! :remove-fn #(.exists (io/file % ".no-reload")))
 ```
