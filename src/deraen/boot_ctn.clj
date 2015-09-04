@@ -6,7 +6,7 @@
   "Setup clojure.tools.namespace to watch Boot temp dirs.
 
    Options:
-   - :remove-fn - Remove folders which contain `.no-reload`-file"
+   - :remove-fn - Use this to filter folders, called with the path as a parameter."
   [& {:keys [remove-fn]}]
   (apply set-refresh-dirs (cond->> (get-env :directories)
                                      remove-fn (remove remove-fn))))
